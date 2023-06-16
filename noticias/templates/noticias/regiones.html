@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colectivo de noticias Caos News</title>
+    <link rel="icon" href="{% static 'noticias/img/logo_chaos.png' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'noticias/css/Style.css' %}">
+</head>
+
+<body class="fondo">
+
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-danger">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="{% url 'index' %}"><img src="{% static 'noticias/img/logo_chaos.png' %}" alt="Logo" width="50" height="50"></a>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="collapse navbar-collapse col-1" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'internacional' %}">Internacional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'deportes' %}">Deportes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'regiones' %}">Regiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'tendencias' %}">Tendencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'Tienda' %}">Tienda</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-2 ml-auto ini">
+            <a href="{% url 'login' %}">
+            <img title="Iniciar secion" src="{% static 'noticias/img/perfil.png' %}" alt="Iniciar sesión" width="50" height="50">
+            </a>
+        </div>
+    </nav>
+
+    <!--Falta la imagen de regiones-->
+
+    <!--Seccion norte-->
+    <section class="fondo_zona_norte container my-5">
+        <h2 class="titulo_football card">Zona norte</h2>
+        <div class="row mt-5">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n1norte.jpg" class="card-img-top img_tarjeta" alt="noticia">
+                    <div class="card-body">
+                        <h5 class="card-title">Gobernador de Arica solicitó mantener resguardo militar en la frontera</h5>
+                        <p class="card-text text_tarjetas">Cabe recordar que a finales de febrero se dio inicio al despliegue de las Fuerzas Armadas para el control de las fronteras norte del país.</p>
+                        <a href="../noticias regiones/regiones_n1norte.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n2norte.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Delincuentes se hicieron pasar por carabineros para asaltar camión con celulares</h5>
+                        <p class="card-text text_tarjetas">La máquina se dirigía del Aeropuerto Diego Aracena a la Zona Franca de Iquique, y sus ocupantes fueron retenidos por los antisociales.</p>
+                        <a href="../noticias regiones/regiones_n2norte.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n3norte.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Delincuente asaltó servicentro disfrazado de dinosaurio en Chañaral</h5>
+                        <p class="card-text text_tarjetas">El hombre quedó en prisión preventiva como medida cautelar.</p>
+                        <a href="../noticias regiones/regiones_n3norte.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion centro-->
+    <section class="fondo_zona_centro container my-5">
+        <h2 class="titulo_football card">Zona centro</h2>
+        <div class="row mt-5">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n1centro.jpeg" class="card-img-top img_tarjeta" alt="noticia">
+                    <div class="card-body">
+                        <h5 class="card-title">Se vienen las lluvias y ola polar: Revisa el pronóstico para la zona centro sur</h5>
+                        <p class="card-text text_tarjetas">Meteorólogo de la Universidad de Talca destacó que este sistema frontal se debe a un "río atmosférico" que será recurrente en el otoño.</p>
+                        <a href="../noticias regiones/regiones_n1centro.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n2centro.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Rancagua: Gendarmería y fiscales judiciales discutieron situación de presos enfermos mentales</h5>
+                        <p class="card-text text_tarjetas">Este grupo "está ocupando casi la totalidad de las camas del Hospital Penitenciario", se explicó.</p>
+                        <a href="../noticias regiones/regiones_n2centro.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n3centro.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Fue inaugurado centro de investigación para disminuir uso de químicos en agricultura</h5>
+                        <p class="card-text text_tarjetas">Instalaciones del Centro Nacional de Bioinsumos están ubicadas en la localidad de Quilamapu.</p>
+                        <a href="../noticias regiones/regiones_n3centro.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion sur-->
+    <section class="fondo_zona_sur container my-5">
+        <h2 class="titulo_football card">Zona sur</h2>
+        <div class="row mt-5">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n1sur.jpg" class="card-img-top img_tarjeta" alt="noticia">
+                    <div class="card-body">
+                        <h5 class="card-title">Cesfam de Talcahuano celebró con show erótico</h5>
+                        <p class="card-text text_tarjetas">El alcalde Henry Campos anunció un sumario administrativo por el show "con contenido no apto, erótico, a las 11 de la mañana".</p>
+                        <a href="../noticias regiones/regiones_n1sur.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n2sur.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Ladrón que apuñaló a mujer para robarle un banano pasará siete años preso</h5>
+                        <p class="card-text text_tarjetas">La víctima fue atacada a la una de la tarde, en momentos en que paseaba junto a un niño de cuatro años.</p>
+                        <a href="../noticias regiones/regiones_n2sur.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/n3sur.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Joven fue sorprendido con 10 kilos de pasta base en un bus interurbano</h5>
+                        <p class="card-text text_tarjetas">Cayó detenido en un control policial en un peaje.</p>
+                        <a href="../noticias regiones/regiones_n3sur.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="pie text-center py-3">
+        <div class="enlaces">
+            <a href="https://es-la.facebook.com/" target="_blank"><img src="{% static 'noticias/img/facebook.png' %}" alt="facebook logo" width="50" height="50"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'noticias/img/instagram.webp' %}" alt="facebook logo" width="50" height="50"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="{% static 'noticias/img/Youtube.png' %}" alt="youtube logo" width="50" height="50"></a>
+            <a href="https://twitter.com/home" target="_blank"><img src="{% static 'noticias/img/twitter.png' %}" alt="facebook logo" width="50" height="50"></a>
+        </div>
+        <img src="{% static 'noticias/img/logo_chaos.png' %}" alt="Logo" width="90" height="90">
+        <p class="parrafo_footer">Fono: (+56 9) 2077 0666</p>
+        <p class="parrafo_footer">Mail: CaosNews@fakemail.net</p>
+        <p>© 2023 Colectivo de noticias Caos News. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

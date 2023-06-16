@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colectivo de noticias Caos News</title>
+    <link rel="icon" href="{% static 'noticias/img/logo_chaos.png' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'noticias/css/Style.css' %}">
+    <script src="{% static 'noticias/js/app.js' %}" async></script>
+</head>
+
+<body class="fondo">
+
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-danger">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="{% url 'index' %}"><img src="{% static 'noticias/img/logo_chaos.png' %}" alt="Logo" width="50" height="50"></a>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="collapse navbar-collapse col-1" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'internacional' %}">Internacional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'deportes' %}">Deportes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'regiones' %}">Regiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'tendencias' %}">Tendencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'Tienda' %}">Tienda</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-2 ml-auto ini">
+            <a href="{% url 'login' %}">
+            <img title="Iniciar secion" src="{% static 'noticias/img/perfil.png' %}" alt="Iniciar sesión" width="50" height="50">
+            </a>
+        </div>
+    </nav>
+
+    <h1 class="titulo_football">Tienda</h1>
+
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Polera Blanca Chaos</span>
+                <img src="../Imagenes/polera.png" alt="" class="img-item">
+                <span class="precio-item">$10.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Gorra Chaos</span>
+                <img src="../Imagenes/Gorra.png" alt="" class="img-item">
+                <span class="precio-item">$4.500</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Estuche Chaos</span>
+                <img src="../Imagenes/Estuche.png" alt="" class="img-item">
+                <span class="precio-item">$9.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Billetera Chaos</span>
+                <img src="../Imagenes/Billetera.png" alt="" class="img-item">
+                <span class="precio-item">$15.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Botella de Agua Chaos</span>
+                <img src="../Imagenes/Botella.png" alt="" class="img-item">
+                <span class="precio-item">$15.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Polera Negra Chaos</span>
+                <img src="../Imagenes/polera_negra.png" alt="" class="img-item">
+                <span class="precio-item">$8.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Carcasa Celular Chaos</span>
+                <img src="../Imagenes/carcasa_para_celular.png" alt="" class="img-item">
+                <span class="precio-item">$13.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Oso de Peluche Chaos</span>
+                <img src="../Imagenes/Peluche_oso.png" alt="" class="img-item">
+                <span class="precio-item">$12.990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="pie text-center py-3">
+        <div class="enlaces">
+            <a href="https://es-la.facebook.com/" target="_blank"><img src="{% static 'noticias/img/facebook.png' %}" alt="facebook logo" width="50" height="50"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'noticias/img/instagram.webp' %}" alt="facebook logo" width="50" height="50"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="{% static 'noticias/img/Youtube.png' %}" alt="youtube logo" width="50" height="50"></a>
+            <a href="https://twitter.com/home" target="_blank"><img src="{% static 'noticias/img/twitter.png' %}" alt="facebook logo" width="50" height="50"></a>
+        </div>
+        <img src="{% static 'noticias/img/logo_chaos.png' %}" alt="Logo" width="90" height="90">
+        <p class="parrafo_footer">Fono: (+56 9) 2077 0666</p>
+        <p class="parrafo_footer">Mail: CaosNews@fakemail.net</p>
+        <p>© 2023 Colectivo de noticias Caos News. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+
+</html>

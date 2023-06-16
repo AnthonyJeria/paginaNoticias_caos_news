@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colectivo de noticias Caos News</title>
+    <link rel="icon" href="{% static 'noticias/img/logo_chaos.png' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'noticias/css/Style.css' %}">
+</head>
+
+<body class="fondo">
+
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-danger">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="{% url 'index' %}"><img src="{% static 'noticias/img/logo_chaos.png' %}" alt="Logo" width="50" height="50"></a>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="collapse navbar-collapse col-1" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'internacional' %}">Internacional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'deportes' %}">Deportes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'regiones' %}">Regiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'tendencias' %}">Tendencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'Tienda' %}">Tienda</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-2 ml-auto ini">
+            <a href="{% url 'login' %}">
+            <img title="Iniciar secion" src="{% static 'noticias/img/perfil.png' %}" alt="Iniciar sesión" width="50" height="50">
+            </a>
+        </div>
+    </nav>
+
+    <div class="logo_inter border-bottom border-danger">
+        <img src="{% static 'noticias/img/Logo_Internacional.png' %}" alt="Logo_Internacional">
+    </div>
+
+    <!--Noticia Ultima hora-->
+    <section class="container my-5">
+        <div class="ultima_hora border-bottom border-top border-danger row mt-5">
+            <div class="col-lg-5 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/ultima_hora.gif" alt="ultima_hora">
+                    <div class="card-body">
+                        <a href="../noticias internacional/noticia_inter_ucrania.html" class="btn btn-danger">VER AHORA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5>El vicepresidente del Consejo de Seguridad ruso, Dmitri Medvédev, aseguró que "aquí a todas luces se cumplirán las condiciones para el uso de cualquier arma".</h5>
+                        <p class="text_destacada">
+                            Los intentos por parte de Ucrania de recuperar la península de Crimea, anexionada por Rusia en 2014, podrían conducir al uso de armas nucleares por parte del Ejército ruso, alertó hoy vicepresidente del Consejo de Seguridad ruso, Dmitri Medvédev. "Si
+                            hablamos de ofensivas serias vinculadas al intento de recuperar por la fuerza Crimea, es totalmente evidente que esto será considerado como un motivo para el uso de cualquier medio, incluyendo los previstos en la doctrina de
+                            contención nuclear", aseveró en una entrevista el también expresidente ruso. Medvédev, conocido por sus declaraciones agresivas e incluso soeces, recordó que la doctrina rusa de contención nuclear prevé el uso de armas nucleares
+                            si la existencia del Estado ruso se ve bajo amenaza. Y el intento de arrebatar parte del Estado ruso es un atentado contra su existencia, indicó. "Saquen sus propias conclusiones: aquí a todas luces se cumplirán las condiciones
+                            para el uso de cualquier arma. Absolutamente cualquiera. Y confío que esto es algo que comprenden nuestros 'amigos' de allende los mares", añadió. Sin embargo, quitó pulso a las intenciones declaradas de Ucrania de intentar
+                            la reconquista de Crimea al señalar que "esto es propaganda, hay que verlo como esto, que es algo que siempre se hace en tiempos de guerra". "Sobre todo porque la situación económica que atraviesan ellos, a diferencia de nosotros,
+                            es horrible", aseveró. Medvédev indicó que en la actualidad Kiev subsiste gracias al financiamiento extranjero y aseguró que en caso de que concluyan las acciones bélicas, "Ucrania no solo es un país arruinado
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion de noticias-->
+    <section class="container my-5 bg-">
+        <div class="row mt-5">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/Taiwan.jpg" class="card-img-top img_tarjeta" alt="noticia">
+                    <div class="card-body">
+                        <h5 class="card-title">Taiwán denuncia una nueva incursión de aviones chinos</h5>
+                        <p class="card-text text_tarjetas">Taiwán denunció este martes la incursión de 26 aviones y 9 barcos chinos en áreas alrededor de la isla, pese a que Pekín anunció ayer el fin de las maniobras que realizó su Ejército, recoge la agencia oficial CNA...</p>
+                        <a href="../noticias internacional/noticia_inter_taiwan.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/dalai.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Las disculpas del Dalái Lama por preguntarle a niño si quiere "chuparle la lengua"</h5>
+                        <p class="card-text text_tarjetas">El Dalái Lama se ha disculpado después de que circulara un video en que interactúa con un niño, le besa en la boca y luego le pregunta si quiere chuparle la lengua.</p>
+                        <a href="../noticias internacional/noticia_inter_dalai.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/LosPanas.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Por qué China y Rusia no son aliados al estilo de la Guerra Fría?</h5>
+                        <p class="card-text text_tarjetas">Hay quienes en Occidente tienden a enmarcar la relación entre Beijing y Moscú utilizando el término geopolítico tradicional de "aliados". Su evaluación es equivocada.</p>
+                        <a href="../noticias internacional/noticia_inter_panas.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/donald.jpg" class="card-img-top img_tarjeta" alt="noticia 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Trump vs. Nueva York: de qué lo acusan, quién es Stormy Daniels y ¿podría ir a la cárcel?</h5>
+                        <p class="card-text text_tarjetas">El ex presidente de Estados Unidos será procesado este martes en medio de la expectación mundial. Según los antecedentes de la causa, Trump habría mantenido una aventura extramatrimonial con la estrella del cine para adultos, Stormy
+                            Daniels, en el año 2006...</p>
+                        <a href="../noticias internacional/noticia_inter_trump.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/gaza.jpg" class="card-img-top img_tarjeta" alt="noticia 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Israel ataca Siria con artillería y por aire tras el lanzamiento de 6 cohetes</h5>
+                        <p class="card-text text_tarjetas">El Ejército israelí atacó esta madrugada posiciones del sur de Siria con artillería y por aire después de que se lanzaran desde esa zona en dos tandas seis cohetes, de los que tres cruzaron a territorio israelí.</p>
+                        <a href="../noticias internacional/noticia_inter_Israel.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/ucrania.jpg" class="card-img-top img_tarjeta" alt="noticia 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Rusia advierte: si Ucrania intenta recuperar Crimea usarán armas nucleares</h5>
+                        <p class="card-text text_tarjetas">Los intentos por parte de Ucrania de recuperar la península de Crimea, anexionada por Rusia en 2014, podrían conducir al uso de armas nucleares por parte del Ejército ruso, alertó hoy vicepresidente del Consejo de Seguridad ruso,
+                            Dmitri Medvédev.
+                        </p>
+                        <a href="../noticias internacional/noticia_inter_ucrania.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="pie text-center py-3">
+        <div class="enlaces">
+            <a href="https://es-la.facebook.com/" target="_blank"><img src="{% static 'noticias/img/facebook.png' %}" alt="facebook logo" width="50" height="50"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'noticias/img/instagram.webp' %}" alt="facebook logo" width="50" height="50"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="{% static 'noticias/img/Youtube.png' %}" alt="youtube logo" width="50" height="50"></a>
+            <a href="https://twitter.com/home" target="_blank"><img src="{% static 'noticias/img/twitter.png' %}" alt="facebook logo" width="50" height="50"></a>
+        </div>
+        <img src="{% static 'noticias/img/logo_chaos.png' %}" alt="Logo" width="90" height="90">
+        <p class="parrafo_footer">Fono: (+56 9) 2077 0666</p>
+        <p class="parrafo_footer">Mail: CaosNews@fakemail.net</p>
+        <p>© 2023 Colectivo de noticias Caos News. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+
+</html>

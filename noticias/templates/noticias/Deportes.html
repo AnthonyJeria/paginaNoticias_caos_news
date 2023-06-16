@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colectivo de noticias Caos News</title>
+    <link rel="icon" href="{% static 'noticias/img/logo_chaos.png' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'noticias/css/Style.css' %}">
+</head>
+
+<body class="fondo">
+
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-danger">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="{% url 'index' %}"><img src="{% static 'noticias/img/logo_chaos.png' %}" alt="Logo" width="50" height="50"></a>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="collapse navbar-collapse col-1" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'internacional' %}">Internacional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'deportes' %}">Deportes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'regiones' %}">Regiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'tendencias' %}">Tendencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="{% url 'Tienda' %}">Tienda</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-2 ml-auto ini">
+            <a href="{% url 'login' %}">
+            <img title="Iniciar secion" src="{% static 'noticias/img/perfil.png' %}" alt="Iniciar sesión" width="50" height="50">
+            </a>
+        </div>
+    </nav>
+
+    <div class="logo_inter border-bottom border-danger">
+        <img src="{% static 'noticias/img/logo_deportes.png' %}" alt="logo_deportes">
+    </div>
+
+    <!--Seccion football nacional-->
+    <section class="fondo_dep_nacional container my-5">
+        <h2 class="titulo_football card">Football Nacional</h2>
+        <div class="row mt-5">
+            <br>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/colo-colo.jpg" class="card-img-top img_tarjeta" alt="noticia">
+                    <div class="card-body">
+                        <h5 class="card-title">"Motivos personales": el jugador que dejaría Colo Colo "de manera anticipada"</h5>
+                        <p class="card-text text_tarjetas">Colo Colo derrotó 3-1 a Palestino en un vacío Estadio Monumental y cerró una semana redonda, pero la tranquilidad de los buenos resultados en Macul se vería afectada por la prematura salida de un integrante del plantel.</p>
+                        <a href="../noticias deportes/noticia_dep_jugador_colo-colo.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/la_U.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Qué decía? La letra de la polémica canción de la U contra Colo Colo</h5>
+                        <p class="card-text text_tarjetas">
+                            Inicio Deportes Fútbol Nacional U. de Chile ¿Qué decía? La letra de la polémica canción de la U contra Colo Colo El equipo de proyección de los azules protagonizó una polémica que causó ruido en la casa de estudios. 24horas.cl Miércoles 26 de abril de
+                            2023 La victoria 1-0 de Universidad de Chile sobre Colo Colo en el Campeonato de Proyección derivó en una polémica que causó mucha molestia al interior de Azul Azul y la casa de estudios. Al terminar el encuentro, el plantel
+                            azul celebró en camarines con cánticos contra Colo Colo donde incitaban a la violencia.</p>
+                        <a href="../noticias deportes/noticia_dep_cancion_laU.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/Atencion_la_calera.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Atento Unión La Calera: La inédita formación que prepara Gustavo Quinteros en Colo Colo</h5>
+                        <p class="card-text text_tarjetas">El técnico de los albos, pensando en el partido de Copa Libertadores ante Boca Juniors, guardaría a algunos jugadores para el duelo de este viernes. Cuando restan pocos días para el inicio de la duodécima fecha del Torneo Nacional,
+                            el técnico Gustavo Quinteros comienza a definir la formación de Colo Colo para el choque de este viernes ante Unión La Calera.</p>
+                        <a href="../noticias deportes/noticia_dep_laCalera.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Seccion football internacinal-->
+    <section class="fondo_dep_internacional container my-5">
+        <h2 class="titulo_football card">Football Internacional</h2>
+        <div class="row mt-5">
+            <br>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/arturo_vidal.jpg" class="card-img-top img_tarjeta" alt="noticia">
+                    <div class="card-body">
+                        <h5 class="card-title">Así evaluaron a Arturo Vidal en Brasil tras brillante actuación en clasificación de Flamengo</h5>
+                        <p class="card-text text_tarjetas">Flamengo hizo un partidazo al golear 8-2 al Maringá FC, resultado que le permitió clasificar a octavos de final de la Copa de Brasil, y donde Arturo Vidal protagonizó una brillante actuación.</p>
+                        <a href="../noticias deportes/noticia_arturo_vidal.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/chile-argentina.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Chile paga caro las distracciones ante Argentina y tropieza en el debut del hexagonal</h5>
+                        <p class="card-text text_tarjetas">Con el pie izquierdo comenzó Chile su participación en el hexagonal final del Sudamericano Sub 17 luego de caer por 0-2 ante una selección de Argentina que no brilló, pero que sí supo aprovechar las distracciones del rival...</p>
+                        <a href="../noticias deportes/noticia_dep_chile_argentina.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/messirve.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">El noble gesto de Messi con un fanático que estuvo 10 horas en la puerta de su casa</h5>
+                        <p class="card-text text_tarjetas">La locura por Lionel Messi alcanza niveles increíbles donde quiera que vaya y ni siquiera en su casa se salva de sus fanáticos. Y es que uno de ellos incluso acampó 10 horas afuera de la vivienda del astro del PSG en París....</p>
+                        <a href="../noticias deportes/noticia_dep_messi.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Seccion otros deportes-->
+    <section class="fondo_otros_dep container my-5">
+        <h2 class="titulo_football card">Mas Deportes</h2>
+        <div class="row mt-5">
+            <br>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/lucha-libre.jpg" class="card-img-top img_tarjeta" alt="noticia">
+                    <div class="card-body">
+                        <h5 class="card-title">Hito en la lucha libre chilena: Ariel Levy debuta en show estelar de AEW</h5>
+                        <p class="card-text text_tarjetas">El actor chileno Ariel Levy debutó en el show estelar de All Elite Wrestling (AEW), empresa de lucha libre que es la competencia directa de la conocida WWE. El intérprete nacional se alejó de los roles protagónicos de nuestro país
+                            para radicarse el 2021 en Florida, Estados Unidos, y probar suerte como luchador.</p>
+                        <a href="../noticias deportes/noticia_dep_luchaLibre.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/Ciclismo.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">El Team Chile de Ciclismo logra una actuación brillante en Panamá</h5>
+                        <p class="card-text text_tarjetas">En Ciudad de Panamá, una de las urbes más importantes de Centroamérica, el Team Chile de Ciclismo se lució ante los mejores exponentes del continente. En el Panamericano específico, la delegación nacional capturó siete preseas
+                            y concluyó en el segundo lugar del medallero, detrás de Colombia, tras los triunfos de los sub-23 Héctor Quintana (contrarreloj) y Vicente Rojas (ruta).</p>
+                        <a href="../noticias deportes/noticia_dep_Ciclismo.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <img src="../Imagenes/Ardilla.png" class="card-img-top img_tarjeta" alt="noticia 3">
+                    <div class="card-body">
+                        <h5 class="card-title">¡Tremendo! Así fue el vuelo de Sebastián “Ardilla” Álvarez sobre Sky Costanera</h5>
+                        <p class="card-text text_tarjetas">Sebastián Álvarez, mejor conocido como “Ardilla”, y famoso por sus increíbles y desafiantes hazañas, ha sorprendido una vez más al país con un infartante vuelo atravesando los pilares que forman el Sky Costanera, en su mítico traje
+                            ardilla.
+                        </p>
+                        <a href="../noticias deportes/noticia_dep_ardilla.html" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="pie text-center py-3">
+        <div class="enlaces">
+            <a href="https://es-la.facebook.com/" target="_blank"><img src="{% static 'noticias/img/facebook.png' %}" alt="facebook logo" width="50" height="50"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'noticias/img/instagram.webp' %}" alt="facebook logo" width="50" height="50"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="{% static 'noticias/img/Youtube.png' %}" alt="youtube logo" width="50" height="50"></a>
+            <a href="https://twitter.com/home" target="_blank"><img src="{% static 'noticias/img/twitter.png' %}" alt="facebook logo" width="50" height="50"></a>
+        </div>
+        <img src="{% static 'noticias/img/logo_chaos.png' %}" alt="Logo" width="90" height="90">
+        <p class="parrafo_footer">Fono: (+56 9) 2077 0666</p>
+        <p class="parrafo_footer">Mail: CaosNews@fakemail.net</p>
+        <p>© 2023 Colectivo de noticias Caos News. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+
+</html>
