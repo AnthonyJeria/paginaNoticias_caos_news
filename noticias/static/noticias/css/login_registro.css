@@ -1,0 +1,139 @@
+/*Diseños que ambas páginas comparten*/
+
+body{
+
+    background-image: url("{% static 'noticias/img/fondo_login.png' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+
+main{
+
+    padding: 20px;
+    margin: 50px;
+
+}
+
+.link{
+
+    width: 85%;
+    padding: 7px 14px;
+    margin: 10px;
+    text-align: center;
+ 
+ }
+ 
+ .link a{
+ 
+     color:black;   
+ 
+ }
+ 
+ .boton{
+ 
+     width: 85%;
+     padding: 7px 14px;
+     margin: 10px;
+     text-align: center;
+ 
+ }
+ 
+ .boton button{
+ 
+     padding: 7px 20px;
+     border: 2px solid black;
+     background: transparent;
+     font-size: 14px;
+     font-weight: 550;
+     cursor: pointer;
+     transition: all 100ms;
+     margin: 10px;
+ 
+ }
+ 
+ .boton button:hover{
+ 
+     padding: 10px 23px;
+ 
+ }
+
+/*diseño de la página login*/
+
+.marco-login{
+
+    height: 370px;
+    padding: 10px 20px;
+    justify-content: center;
+    background-color: rgb(194, 31, 34);
+    border-radius: 20px;
+    max-width: 300px;
+    margin: auto;
+
+}
+
+.marco-login form h2{
+
+    font-weight: 550;
+    font-size: 35px;
+    text-align: center;
+    margin: 20px 10px;
+    color:black;  
+
+}
+
+.marco-login form input{
+
+    width: 85%;
+    padding: 7px;
+    margin: 14px;
+    text-align:left;
+    font-size: 12px;
+
+}
+
+/*diseño de la página registro*/
+
+.marco-registrarse{
+
+    height: 500px;
+    padding: 10px 20px;
+    justify-content: center;
+    background-color: rgb(194, 31, 34);
+    border-radius: 20px;
+    max-width: 300px;
+    margin: auto;
+
+}
+
+.marco-registrarse form h2{
+
+    font-weight: 550;
+    font-size: 35px;
+    text-align: center;
+    margin: 20px 10px;
+    color:black; 
+
+}
+
+.marco-registrarse form input{
+
+    width: 85%;
+    padding: 7px;
+    margin: 14px;
+    text-align:left;
+    font-size: 12px;
+
+}
+
+.marco-registrarse form a{
+
+    width: 85%;
+    padding: 7px 14px;
+    margin: 12px;
+    text-align: center;
+
+}
