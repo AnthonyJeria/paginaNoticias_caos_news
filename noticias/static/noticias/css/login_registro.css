@@ -1,16 +1,5 @@
 /*Diseños que ambas páginas comparten*/
 
-body{
-
-    background-image: url("{% static 'noticias/img/fondo_login.png' %}");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-
-}
-
 main{
 
     padding: 20px;
