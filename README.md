@@ -1,3 +1,3 @@
 # paginaNoticias_caos_news
 
-Migracion a Django
+estan los modelos pero no han sido importados
