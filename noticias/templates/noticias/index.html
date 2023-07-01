@@ -62,32 +62,20 @@
         <div class="col-10">
             <div id="carouselExampleCaptions" class="logo_inter carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    {% for noticia in ultimas %}
+                        <li data-target="#carouselExampleCaptions" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></li>
+                    {% endfor %}
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a href="noticia1.html"><img src="Imagenes/Alcalde-cohecho.jpg" class="d-block w-100 carrousel-img img-fluid" alt="noticia"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>Prisión preventiva para alcalde de San Ignacio por fraude al fisco y cohecho</h3>
-                            <p>Este miércoles el Juzgado de Garantía de Bulnes decretó prisión preventiva para el alcalde de San Ignacio...</p>
+                    {% for noticia in ultimas %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <a href="noticia1.html"><img src="{{ noticia.imagen_noticia.url }}" class="d-block w-100 carrousel-img img-fluid" alt="noticia"></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>{{ noticia.titular }}</h3>
+                                <p>{{ noticia.entradilla }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="./noticias regiones/regiones_n1norte.html"><img src="Imagenes/n1norte.jpg" class="d-block w-100 carrousel-img img-fluid" alt="noticia"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>Gobernador de Arica solicitó mantener resguardo militar en la frontera</h3>
-                            <p>Cabe recordar que a finales de febrero se dio inicio al despliegue de las Fuerzas Armadas para el control de las fronteras norte del país.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="./noticias internacional/noticia_inter_panas.html"><img src="Imagenes/LosPanas.jpg" class="d-block w-100 carrousel-img img-fluid" alt="noticia"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>¿Por qué China y Rusia no son aliados al estilo de la Guerra Fría?</h3>
-                            <p>Xi enfatizó esta semana que bajo las nuevas circunstancias históricas, las dos partes verán y manejarán las relaciones entre China y Rusia con una visión amplia y una perspectiva a largo plazo...</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -106,101 +94,18 @@
     <!--Seccion de noticias-->
     <section class="container my-5">
         <div class="row mt-5">
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="Imagenes/n1centro.jpeg" class="card-img-top img_tarjeta" alt="noticia">
-                    <div class="card-body">
-                        <h5 class="card-title">Se vienen las lluvias y ola polar: Revisa el pronóstico para la zona centro sur</h5>
-                        <p class="card-text text_tarjetas">Meteorólogo de la Universidad de Talca destacó que este sistema frontal se debe a un "río atmosférico" que será recurrente en el otoño.</p>
-                        <a href="./noticias regiones/regiones_n1centro.html" class="btn btn-primary btn-read-more">Leer más</a>
+            {% for noticia in noticias %}
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="{{ noticia.imagen_noticia.url }}" class="card-img-top img_tarjeta" alt="noticia">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ noticia.titular }}</h5>
+                            <p class="card-text text_tarjetas">{{ noticia.entradilla }}</p>
+                            <a href="./noticias regiones/regiones_n1centro.html" class="btn btn-primary btn-read-more">Leer más</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="Imagenes/n1norte.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Gobernador de Arica solicitó mantener resguardo militar en la frontera</h5>
-                        <p class="card-text text_tarjetas">Cabe recordar que a finales de febrero se dio inicio al despliegue de las Fuerzas Armadas para el control de las fronteras norte del país.</p>
-                        <a href="./noticias regiones/regiones_n1norte.html" class="btn btn-primary btn-read-more">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="Imagenes/LosPanas.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
-                    <div class="card-body">
-                        <h5 class="card-title">¿Por qué China y Rusia no son aliados al estilo de la Guerra Fría?</h5>
-                        <p class="card-text text_tarjetas">Hay quienes en Occidente tienden a enmarcar la relación entre Beijing y Moscú utilizando el término geopolítico tradicional de "aliados". Su evaluación es equivocada.</p>
-                        <a href="./noticias internacional/noticia_inter_panas.html" class="btn btn-primary btn-read-more">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="Imagenes/donald.jpg" class="card-img-top img_tarjeta" alt="noticia 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Trump vs. Nueva York: de qué lo acusan, quién es Stormy Daniels y ¿podría ir a la cárcel?</h5>
-                        <p class="card-text text_tarjetas">El ex presidente de Estados Unidos será procesado este martes en medio de la expectación mundial. Según los antecedentes de la causa, Trump habría mantenido una aventura extramatrimonial con la estrella del cine para adultos, Stormy
-                            Daniels, en el año 2006...</p>
-                        <a href="#" class="btn btn-primary btn-read-more">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="Imagenes/Alcalde-cohecho.jpg" class="card-img-top img_tarjeta" alt="noticia 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Prisión preventiva para alcalde de San Ignacio por fraude al fisco y cohecho</h5>
-                        <p class="card-text text_tarjetas">Este miércoles el Juzgado de Garantía de Bulnes decretó prisión preventiva para el alcalde de San Ignacio, César Figueroa, ex militante UDI, por los siguientes delitos: fraude al fisco, cohecho y otros.La medida además se decretó
-                            para el funcionario público Krysler Monroy, el empresario Rodrigo Carmona y su colaborador Rodrigo Sandoval.</p>
-                        <a href="noticia1.html" class="btn btn-primary btn-read-more">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="Imagenes/messirve.jpg" class="card-img-top img_tarjeta" alt="noticia 6">
-                    <div class="card-body">
-                        <h5 class="card-title">El noble gesto de Messi con un fanático que estuvo 10 horas en la puerta de su casa</h5>
-                        <p class="card-text text_tarjetas">La locura por Lionel Messi alcanza niveles increíbles donde quiera que vaya y ni siquiera en su casa se salva de sus fanáticos. Y es que uno de ellos incluso acampó 10 horas afuera de la vivienda del astro del PSG en París. Se
-                            trata de un jugador argentino de futsal, quien juega semiprofesional en Italia, y que viajó hasta la capital francesa para intentar conocer a su ídolo.</p>
-                        <a href="./noticias deportes/noticia_dep_messi.html" class="btn btn-primary btn-read-more">Leer más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Noticia Ultima hora-->
-    <section class="container my-5">
-        <div class="ultima_hora border-bottom border-top border-danger row mt-5">
-            <div class="col-lg-5 mb-4">
-                <div class="card h-100">
-                    <img src="Imagenes/ultima_hora.gif" alt="ultima_hora">
-                    <div class="card-body">
-                        <a href="./noticias internacional/noticia_inter_ucrania.html" class="btn btn-danger">VER AHORA</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5>El vicepresidente del Consejo de Seguridad ruso, Dmitri Medvédev, aseguró que "aquí a todas luces se cumplirán las condiciones para el uso de cualquier arma".</h5>
-                        <p class="text_destacada">
-                            Los intentos por parte de Ucrania de recuperar la península de Crimea, anexionada por Rusia en 2014, podrían conducir al uso de armas nucleares por parte del Ejército ruso, alertó hoy vicepresidente del Consejo de Seguridad ruso, Dmitri Medvédev. "Si
-                            hablamos de ofensivas serias vinculadas al intento de recuperar por la fuerza Crimea, es totalmente evidente que esto será considerado como un motivo para el uso de cualquier medio, incluyendo los previstos en la doctrina de
-                            contención nuclear", aseveró en una entrevista el también expresidente ruso. Medvédev, conocido por sus declaraciones agresivas e incluso soeces, recordó que la doctrina rusa de contención nuclear prevé el uso de armas nucleares
-                            si la existencia del Estado ruso se ve bajo amenaza. Y el intento de arrebatar parte del Estado ruso es un atentado contra su existencia, indicó. "Saquen sus propias conclusiones: aquí a todas luces se cumplirán las condiciones
-                            para el uso de cualquier arma. Absolutamente cualquiera. Y confío que esto es algo que comprenden nuestros 'amigos' de allende los mares", añadió. Sin embargo, quitó pulso a las intenciones declaradas de Ucrania de intentar
-                            la reconquista de Crimea al señalar que "esto es propaganda, hay que verlo como esto, que es algo que siempre se hace en tiempos de guerra". "Sobre todo porque la situación económica que atraviesan ellos, a diferencia de nosotros,
-                            es horrible", aseveró. Medvédev indicó que en la actualidad Kiev subsiste gracias al financiamiento extranjero y aseguró que en caso de que concluyan las acciones bélicas, "Ucrania no solo es un país arruinado
-                        </p>
-
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 

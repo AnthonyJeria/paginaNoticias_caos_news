@@ -55,42 +55,25 @@
         </div>
     </nav>
 
-    <!--Falta la imagen de regiones-->
-
     <!--Seccion norte-->
     <section class="fondo_zona_norte container my-5">
         <h2 class="titulo_football card">Zona norte</h2>
         <div class="row mt-5">
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n1norte.jpg" class="card-img-top img_tarjeta" alt="noticia">
-                    <div class="card-body">
-                        <h5 class="card-title">Gobernador de Arica solicitó mantener resguardo militar en la frontera</h5>
-                        <p class="card-text text_tarjetas">Cabe recordar que a finales de febrero se dio inicio al despliegue de las Fuerzas Armadas para el control de las fronteras norte del país.</p>
-                        <a href="../noticias regiones/regiones_n1norte.html" class="btn btn-primary">Leer más</a>
+            
+            {% for noticia in noticias %}
+                {% if noticia.num_subtipo_noticia == 1 %}
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ noticia.imagen_noticia.url }}" class="card-img-top img_tarjeta" alt="noticia">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ noticia.titular }}</h5>
+                                <p class="card-text text_tarjetas">{{ noticia.entradilla }}</p>
+                                <a href="../noticias deportes/noticia_dep_jugador_colo-colo.html" class="btn btn-primary">Leer más</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n2norte.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Delincuentes se hicieron pasar por carabineros para asaltar camión con celulares</h5>
-                        <p class="card-text text_tarjetas">La máquina se dirigía del Aeropuerto Diego Aracena a la Zona Franca de Iquique, y sus ocupantes fueron retenidos por los antisociales.</p>
-                        <a href="../noticias regiones/regiones_n2norte.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n3norte.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Delincuente asaltó servicentro disfrazado de dinosaurio en Chañaral</h5>
-                        <p class="card-text text_tarjetas">El hombre quedó en prisión preventiva como medida cautelar.</p>
-                        <a href="../noticias regiones/regiones_n3norte.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </section>
 
@@ -98,36 +81,21 @@
     <section class="fondo_zona_centro container my-5">
         <h2 class="titulo_football card">Zona centro</h2>
         <div class="row mt-5">
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n1centro.jpeg" class="card-img-top img_tarjeta" alt="noticia">
-                    <div class="card-body">
-                        <h5 class="card-title">Se vienen las lluvias y ola polar: Revisa el pronóstico para la zona centro sur</h5>
-                        <p class="card-text text_tarjetas">Meteorólogo de la Universidad de Talca destacó que este sistema frontal se debe a un "río atmosférico" que será recurrente en el otoño.</p>
-                        <a href="../noticias regiones/regiones_n1centro.html" class="btn btn-primary">Leer más</a>
+            
+            {% for noticia in noticias %}
+                {% if noticia.num_subtipo_noticia == 2 %}
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ noticia.imagen_noticia.url }}" class="card-img-top img_tarjeta" alt="noticia">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ noticia.titular }}</h5>
+                                <p class="card-text text_tarjetas">{{ noticia.entradilla }}</p>
+                                <a href="../noticias deportes/noticia_dep_jugador_colo-colo.html" class="btn btn-primary">Leer más</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n2centro.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Rancagua: Gendarmería y fiscales judiciales discutieron situación de presos enfermos mentales</h5>
-                        <p class="card-text text_tarjetas">Este grupo "está ocupando casi la totalidad de las camas del Hospital Penitenciario", se explicó.</p>
-                        <a href="../noticias regiones/regiones_n2centro.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n3centro.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Fue inaugurado centro de investigación para disminuir uso de químicos en agricultura</h5>
-                        <p class="card-text text_tarjetas">Instalaciones del Centro Nacional de Bioinsumos están ubicadas en la localidad de Quilamapu.</p>
-                        <a href="../noticias regiones/regiones_n3centro.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </section>
 
@@ -135,36 +103,21 @@
     <section class="fondo_zona_sur container my-5">
         <h2 class="titulo_football card">Zona sur</h2>
         <div class="row mt-5">
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n1sur.jpg" class="card-img-top img_tarjeta" alt="noticia">
-                    <div class="card-body">
-                        <h5 class="card-title">Cesfam de Talcahuano celebró con show erótico</h5>
-                        <p class="card-text text_tarjetas">El alcalde Henry Campos anunció un sumario administrativo por el show "con contenido no apto, erótico, a las 11 de la mañana".</p>
-                        <a href="../noticias regiones/regiones_n1sur.html" class="btn btn-primary">Leer más</a>
+            
+            {% for noticia in noticias %}
+                {% if noticia.num_subtipo_noticia == 3 %}
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ noticia.imagen_noticia.url }}" class="card-img-top img_tarjeta" alt="noticia">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ noticia.titular }}</h5>
+                                <p class="card-text text_tarjetas">{{ noticia.entradilla }}</p>
+                                <a href="../noticias deportes/noticia_dep_jugador_colo-colo.html" class="btn btn-primary">Leer más</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n2sur.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Ladrón que apuñaló a mujer para robarle un banano pasará siete años preso</h5>
-                        <p class="card-text text_tarjetas">La víctima fue atacada a la una de la tarde, en momentos en que paseaba junto a un niño de cuatro años.</p>
-                        <a href="../noticias regiones/regiones_n2sur.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/n3sur.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Joven fue sorprendido con 10 kilos de pasta base en un bus interurbano</h5>
-                        <p class="card-text text_tarjetas">Cayó detenido en un control policial en un peaje.</p>
-                        <a href="../noticias regiones/regiones_n3sur.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </section>
 

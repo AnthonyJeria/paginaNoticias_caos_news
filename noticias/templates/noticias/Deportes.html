@@ -64,40 +64,20 @@
         <h2 class="titulo_football card">Football Nacional</h2>
         <div class="row mt-5">
             <br>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/colo-colo.jpg" class="card-img-top img_tarjeta" alt="noticia">
-                    <div class="card-body">
-                        <h5 class="card-title">"Motivos personales": el jugador que dejaría Colo Colo "de manera anticipada"</h5>
-                        <p class="card-text text_tarjetas">Colo Colo derrotó 3-1 a Palestino en un vacío Estadio Monumental y cerró una semana redonda, pero la tranquilidad de los buenos resultados en Macul se vería afectada por la prematura salida de un integrante del plantel.</p>
-                        <a href="../noticias deportes/noticia_dep_jugador_colo-colo.html" class="btn btn-primary">Leer más</a>
+            {% for noticia in noticias %}
+                {% if noticia.num_subtipo_noticia == 1 %}
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ noticia.imagen_noticia.url }}" class="card-img-top img_tarjeta" alt="noticia">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ noticia.titular }}</h5>
+                                <p class="card-text text_tarjetas">{{ noticia.entradilla }}</p>
+                                <a href="../noticias deportes/noticia_dep_jugador_colo-colo.html" class="btn btn-primary">Leer más</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/la_U.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
-                    <div class="card-body">
-                        <h5 class="card-title">¿Qué decía? La letra de la polémica canción de la U contra Colo Colo</h5>
-                        <p class="card-text text_tarjetas">
-                            Inicio Deportes Fútbol Nacional U. de Chile ¿Qué decía? La letra de la polémica canción de la U contra Colo Colo El equipo de proyección de los azules protagonizó una polémica que causó ruido en la casa de estudios. 24horas.cl Miércoles 26 de abril de
-                            2023 La victoria 1-0 de Universidad de Chile sobre Colo Colo en el Campeonato de Proyección derivó en una polémica que causó mucha molestia al interior de Azul Azul y la casa de estudios. Al terminar el encuentro, el plantel
-                            azul celebró en camarines con cánticos contra Colo Colo donde incitaban a la violencia.</p>
-                        <a href="../noticias deportes/noticia_dep_cancion_laU.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/Atencion_la_calera.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Atento Unión La Calera: La inédita formación que prepara Gustavo Quinteros en Colo Colo</h5>
-                        <p class="card-text text_tarjetas">El técnico de los albos, pensando en el partido de Copa Libertadores ante Boca Juniors, guardaría a algunos jugadores para el duelo de este viernes. Cuando restan pocos días para el inicio de la duodécima fecha del Torneo Nacional,
-                            el técnico Gustavo Quinteros comienza a definir la formación de Colo Colo para el choque de este viernes ante Unión La Calera.</p>
-                        <a href="../noticias deportes/noticia_dep_laCalera.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </section>
 
@@ -107,36 +87,21 @@
         <h2 class="titulo_football card">Football Internacional</h2>
         <div class="row mt-5">
             <br>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/arturo_vidal.jpg" class="card-img-top img_tarjeta" alt="noticia">
-                    <div class="card-body">
-                        <h5 class="card-title">Así evaluaron a Arturo Vidal en Brasil tras brillante actuación en clasificación de Flamengo</h5>
-                        <p class="card-text text_tarjetas">Flamengo hizo un partidazo al golear 8-2 al Maringá FC, resultado que le permitió clasificar a octavos de final de la Copa de Brasil, y donde Arturo Vidal protagonizó una brillante actuación.</p>
-                        <a href="../noticias deportes/noticia_arturo_vidal.html" class="btn btn-primary">Leer más</a>
+            
+            {% for noticia in noticias %}
+                {% if noticia.num_subtipo_noticia == 2 %}
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ noticia.imagen_noticia.url }}" class="card-img-top img_tarjeta" alt="noticia">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ noticia.titular }}</h5>
+                                <p class="card-text text_tarjetas">{{ noticia.entradilla }}</p>
+                                <a href="../noticias deportes/noticia_dep_jugador_colo-colo.html" class="btn btn-primary">Leer más</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/chile-argentina.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Chile paga caro las distracciones ante Argentina y tropieza en el debut del hexagonal</h5>
-                        <p class="card-text text_tarjetas">Con el pie izquierdo comenzó Chile su participación en el hexagonal final del Sudamericano Sub 17 luego de caer por 0-2 ante una selección de Argentina que no brilló, pero que sí supo aprovechar las distracciones del rival...</p>
-                        <a href="../noticias deportes/noticia_dep_chile_argentina.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/messirve.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
-                    <div class="card-body">
-                        <h5 class="card-title">El noble gesto de Messi con un fanático que estuvo 10 horas en la puerta de su casa</h5>
-                        <p class="card-text text_tarjetas">La locura por Lionel Messi alcanza niveles increíbles donde quiera que vaya y ni siquiera en su casa se salva de sus fanáticos. Y es que uno de ellos incluso acampó 10 horas afuera de la vivienda del astro del PSG en París....</p>
-                        <a href="../noticias deportes/noticia_dep_messi.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </section>
 
@@ -146,40 +111,21 @@
         <h2 class="titulo_football card">Mas Deportes</h2>
         <div class="row mt-5">
             <br>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/lucha-libre.jpg" class="card-img-top img_tarjeta" alt="noticia">
-                    <div class="card-body">
-                        <h5 class="card-title">Hito en la lucha libre chilena: Ariel Levy debuta en show estelar de AEW</h5>
-                        <p class="card-text text_tarjetas">El actor chileno Ariel Levy debutó en el show estelar de All Elite Wrestling (AEW), empresa de lucha libre que es la competencia directa de la conocida WWE. El intérprete nacional se alejó de los roles protagónicos de nuestro país
-                            para radicarse el 2021 en Florida, Estados Unidos, y probar suerte como luchador.</p>
-                        <a href="../noticias deportes/noticia_dep_luchaLibre.html" class="btn btn-primary">Leer más</a>
+            
+            {% for noticia in noticias %}
+                {% if noticia.num_subtipo_noticia == 3 %}
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ noticia.imagen_noticia.url }}" class="card-img-top img_tarjeta" alt="noticia">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ noticia.titular }}</h5>
+                                <p class="card-text text_tarjetas">{{ noticia.entradilla }}</p>
+                                <a href="../noticias deportes/noticia_dep_jugador_colo-colo.html" class="btn btn-primary">Leer más</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/Ciclismo.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
-                    <div class="card-body">
-                        <h5 class="card-title">El Team Chile de Ciclismo logra una actuación brillante en Panamá</h5>
-                        <p class="card-text text_tarjetas">En Ciudad de Panamá, una de las urbes más importantes de Centroamérica, el Team Chile de Ciclismo se lució ante los mejores exponentes del continente. En el Panamericano específico, la delegación nacional capturó siete preseas
-                            y concluyó en el segundo lugar del medallero, detrás de Colombia, tras los triunfos de los sub-23 Héctor Quintana (contrarreloj) y Vicente Rojas (ruta).</p>
-                        <a href="../noticias deportes/noticia_dep_Ciclismo.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/Ardilla.png" class="card-img-top img_tarjeta" alt="noticia 3">
-                    <div class="card-body">
-                        <h5 class="card-title">¡Tremendo! Así fue el vuelo de Sebastián “Ardilla” Álvarez sobre Sky Costanera</h5>
-                        <p class="card-text text_tarjetas">Sebastián Álvarez, mejor conocido como “Ardilla”, y famoso por sus increíbles y desafiantes hazañas, ha sorprendido una vez más al país con un infartante vuelo atravesando los pilares que forman el Sky Costanera, en su mítico traje
-                            ardilla.
-                        </p>
-                        <a href="../noticias deportes/noticia_dep_ardilla.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </section>
 

@@ -62,54 +62,14 @@
     <section class="contenedor">
         <!-- Contenedor de elementos -->
         <div class="contenedor-items">
-            <div class="item">
-                <span class="titulo-item">Polera Blanca Chaos</span>
-                <img src="../Imagenes/polera.png" alt="" class="img-item">
-                <span class="precio-item">$10.990</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Gorra Chaos</span>
-                <img src="../Imagenes/Gorra.png" alt="" class="img-item">
-                <span class="precio-item">$4.500</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Estuche Chaos</span>
-                <img src="../Imagenes/Estuche.png" alt="" class="img-item">
-                <span class="precio-item">$9.990</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Billetera Chaos</span>
-                <img src="../Imagenes/Billetera.png" alt="" class="img-item">
-                <span class="precio-item">$15.990</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Botella de Agua Chaos</span>
-                <img src="../Imagenes/Botella.png" alt="" class="img-item">
-                <span class="precio-item">$15.990</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Polera Negra Chaos</span>
-                <img src="../Imagenes/polera_negra.png" alt="" class="img-item">
-                <span class="precio-item">$8.990</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Carcasa Celular Chaos</span>
-                <img src="../Imagenes/carcasa_para_celular.png" alt="" class="img-item">
-                <span class="precio-item">$13.990</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">Oso de Peluche Chaos</span>
-                <img src="../Imagenes/Peluche_oso.png" alt="" class="img-item">
-                <span class="precio-item">$12.990</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
+            {% for producto in productos %}
+                <div class="item">
+                    <span class="titulo-item">{{ producto.nombre_producto }}</span>
+                    <img src="{{ producto.imagen_producto.url }}" alt="{{ producto.nombre_producto }}" class="img-item">
+                    <span class="precio-item">${{ producto.precio }}</span>
+                    <button class="boton-item">Agregar al Carrito</button>
+                </div>
+            {% endfor %}
         </div>
         <!-- Carrito de Compras -->
         <div class="carrito" id="carrito">

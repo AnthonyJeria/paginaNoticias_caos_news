@@ -58,33 +58,19 @@
     <!--Seccion de noticias-->
     <section class="container my-5 bg-">
         <div class="row mt-5">
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/tendencias_n1.jpg" class="card-img-top img_tarjeta" alt="noticia">
-                    <div class="card-body">
-                        <p class="card-text text_tarjetas">"Está pasando por una crisis": Cristián Castro se quita la ropa durante concierto con Miranda! y se vuelve viral</p>
-                        <a href="../noticias tendencias/tendencia_n1.html" class="btn btn-primary">Leer más</a>
+            
+            {% for noticia in noticias %}
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="{{ noticia.imagen_noticia.url }}" class="card-img-top img_tarjeta" alt="noticia">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ noticia.titular }}</h5>
+                            <p class="card-text text_tarjetas">{{ noticia.entradilla }}</p>
+                            <a href="./noticias regiones/regiones_n1centro.html" class="btn btn-primary btn-read-more">Leer más</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/tendencias_n2.jpg" class="card-img-top img_tarjeta" alt="noticia 2">
-                    <div class="card-body">
-                        <p class="card-text text_tarjetas">"Sería un honor": Emprendedor chileno se inspiró en Karol G para crear zapatillas y la artista colombiana le contestó</p>
-                        <a href="../noticias tendencias/tendencias_n2.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <img src="../Imagenes/tendencias_n3.jpg" class="card-img-top img_tarjeta" alt="noticia 3">
-                    <div class="card-body">
-                        <p class="card-text text_tarjetas">Reseña de Evil Dead Rise (2023): un festín para los fanáticos del terror</p>
-                        <a href="../noticias tendencias/tencencias_n3.html" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 
