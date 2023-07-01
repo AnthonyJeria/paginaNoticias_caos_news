@@ -31,3 +31,13 @@ class Producto(models.Model):
 
     def __str__(self):
         return str(self.nombre_producto)
+    
+class usuario(models.Model):
+    id_usuario              =models.AutoField(db_column='idNoticia', primary_key=True)
+    nombre_completo         =models.CharField(max_length=500)
+    correo_electronico      =models.CharField(max_length=500)
+    nombre_usuario          =models.CharField(max_length=500)
+    contrasenna             =models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.nombre_usuario)

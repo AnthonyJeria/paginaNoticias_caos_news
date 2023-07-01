@@ -8,7 +8,7 @@ from noticias.models import Noticia
 
 
 def index(request):
-    noticias = Noticia.objects.order_by('fecha_noticia')[:9]
+    noticias = Noticia.objects.order_by('fecha_noticia')[:12]
     ultimas =Noticia.objects.order_by('-fecha_noticia')[:3]
     context={
         'noticias' : noticias,
@@ -41,9 +41,25 @@ def regiones(request):
         }
     return render(request, 'noticias/regiones.html', context)
 
+
 def registrarse(request):
     context={}
     return render(request, 'noticias/registrarse.html', context)
+
+
+##def registrarse(request):
+#    context={'form' : UsusarioForm()}
+#    if request.method=='POST':
+#        formulario=UsusarioForm(request.POST, files=request.FILES)
+#
+#       if formulario.is_valid:
+#            formulario.save()
+#            context={'mensaje':"Usuario registrado correctamente"}
+#    return render(request,'noticias/registrarse.html', context)
+
+
+
+
 
 def tendencias(request):
     noticias = Noticia.objects.filter(id_tipo=4)
