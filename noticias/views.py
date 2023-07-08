@@ -65,3 +65,7 @@ def Tienda(request):
         'productos' : productos
     }
     return render(request, 'noticias/Tienda.html', context)
+
+def Agregar(request):
+    context={}
+    return render(request, 'noticias/Agregar.html', context)

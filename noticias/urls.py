@@ -12,5 +12,6 @@ urlpatterns = [
     path('regiones', views.regiones, name='regiones'),
     path('registrarse', views.registrarse, name='registrarse'),
     path('tendencias', views.tendencias, name='tendencias'),
-    path('Tienda', views.Tienda, name='Tienda')
+    path('Tienda', views.Tienda, name='Tienda'),
+    path('Agregar', views.Agregar, name='Agregar')
 ]
