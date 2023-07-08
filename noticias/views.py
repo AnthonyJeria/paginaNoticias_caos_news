@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from noticias.models import Producto, usuario
 from noticias.models import Noticia
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth import authenticate, login
+from django.db import IntegrityError
 
 
 # Create your views here.
@@ -46,13 +49,22 @@ def registrarse(request):
         context={}
         return render(request, 'noticias/registrarse.html', context)
     else:
-        obj=usuario.objects.create(nombre_completo=request.POST["nombre"],
-                                   correo_electronico=request.POST["correo"],
-                                   nombre_usuario=request.POST["usuario"],
-                                   contrasenna=request.POST["contraseña"])
-        obj.save()
-        context={'mensaje':"Usuario registrado"}
-        return redirect("index")
+        if request.POST["contraseña"] == request.POST["contraseña2"]:
+            try:
+                obj=usuario.objects.create(nombre_completo=request.POST["nombre"],
+                                           correo_electronico=request.POST["correo"],
+                                           nombre_usuario=request.POST["usuario"],
+                                           contrasenna=request.POST["contraseña"])
+                obj.save()
+                login(request, obj)
+                context={'mensaje':"Usuario registrado"}
+                return redirect("index")
+            except IntegrityError:
+                context = {"error": "El usuario ya existe"}
+                return render(request, 'noticias/registrarse.html', context)
+        else:
+            context = {"error": "Contraseñas no coinciden"}
+            return render(request, 'noticias/registrarse.html', context)
 
 def tendencias(request):
     noticias = Noticia.objects.filter(id_tipo=4)
