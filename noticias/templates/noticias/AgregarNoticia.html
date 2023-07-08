@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Noticias</title>
+</head>
+<body>
+    <h1>Noticia</h1>
+    <form method="POST" action="{% url 'guardar_noticia' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo">
+        <br>
+        <label for="contenido">Contenido:</label>
+        <textarea id="contenido" name="contenido"></textarea>
+        <br>
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen">
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
