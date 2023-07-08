@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from noticias.models import Producto
+from django.shortcuts import render, redirect
+from noticias.models import Producto, usuario
 from noticias.models import Noticia
 
 
@@ -41,25 +41,18 @@ def regiones(request):
         }
     return render(request, 'noticias/regiones.html', context)
 
-
 def registrarse(request):
-    context={}
-    return render(request, 'noticias/registrarse.html', context)
-
-
-##def registrarse(request):
-#    context={'form' : UsusarioForm()}
-#    if request.method=='POST':
-#        formulario=UsusarioForm(request.POST, files=request.FILES)
-#
-#       if formulario.is_valid:
-#            formulario.save()
-#            context={'mensaje':"Usuario registrado correctamente"}
-#    return render(request,'noticias/registrarse.html', context)
-
-
-
-
+    if request.method != "POST":
+        context={}
+        return render(request, 'noticias/registrarse.html', context)
+    else:
+        obj=usuario.objects.create(nombre_completo=request.POST["nombre"],
+                                   correo_electronico=request.POST["correo"],
+                                   nombre_usuario=request.POST["usuario"],
+                                   contrasenna=request.POST["contraseña"])
+        obj.save()
+        context={'mensaje':"Usuario registrado"}
+        return redirect("index")
 
 def tendencias(request):
     noticias = Noticia.objects.filter(id_tipo=4)
